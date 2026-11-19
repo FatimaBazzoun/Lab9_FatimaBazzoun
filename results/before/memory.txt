@@ -1,0 +1,38 @@
+> python -u -m memory_profiler profiler_memoryprofiler.py
+Filename: profiler_memoryprofiler.py
+
+Line #    Mem usage    Increment  Occurrences   Line Contents
+=============================================================
+    10     25.3 MiB     25.3 MiB           1   @profile
+    11                                         def slow_function():
+    12     25.3 MiB      0.0 MiB           1       time.sleep(2)
+    13     25.3 MiB      0.0 MiB           1       total = 0
+    14     25.3 MiB      0.0 MiB       10001       for i in range(10000):
+    15     25.3 MiB      0.0 MiB       10000           total += i ** 2
+    16     25.3 MiB      0.0 MiB           1       return total
+
+
+Filename: profiler_memoryprofiler.py
+
+Line #    Mem usage    Increment  Occurrences   Line Contents
+=============================================================
+    19     25.3 MiB     25.3 MiB           1   @profile
+    20                                         def fast_function():
+    21     25.3 MiB      0.0 MiB           1       total = 0
+    22     25.3 MiB      0.0 MiB         101       for i in range(100):
+    23     25.3 MiB      0.0 MiB         100           total += i ** 2
+    24     25.3 MiB      0.0 MiB           1       return total
+
+
+Filename: profiler_memoryprofiler.py
+
+Line #    Mem usage    Increment  Occurrences   Line Contents
+=============================================================
+    27     25.3 MiB     25.3 MiB           1   @profile
+    28                                         def memory_intensive_function():
+    29     25.3 MiB      0.0 MiB           1       total = 0
+    30     25.4 MiB -374058.2 MiB    10000001       for i in range(10000000):
+    31     25.4 MiB -374058.2 MiB    10000000           total += i ** 2
+    32     25.4 MiB     -0.0 MiB           1       return total
+
+

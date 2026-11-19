@@ -1,0 +1,46 @@
+> python -u profiler_lineprofiler.py
+Timer unit: 1e-06 s
+
+Total time: 2.02103 s
+File: C:\2-uni\10-FallE4\EECE 435L\Lab9_FatimaBazzoun\Lab9_FatimaBazzoun\code\before\profiler.py
+Function: slow_function at line 6
+
+Line #      Hits         Time  Per Hit   % Time  Line Contents
+==============================================================
+     6                                           def slow_function():
+     7                                               """Wait two seconds, then sum the squares from 0 through 9,999."""
+     8         1    2000712.7    2e+06     99.0      time.sleep(2)
+     9         1          7.9      7.9      0.0      total = 0
+    10     10001       9043.8      0.9      0.4      for i in range(10000):
+    11     10000      11262.2      1.1      0.6          total += i ** 2
+    12         1          4.5      4.5      0.0      return total
+
+Total time: 0.0001286 s
+File: C:\2-uni\10-FallE4\EECE 435L\Lab9_FatimaBazzoun\Lab9_FatimaBazzoun\code\before\profiler.py
+Function: fast_function at line 15
+
+Line #      Hits         Time  Per Hit   % Time  Line Contents
+==============================================================
+    15                                           def fast_function():
+    16                                               """Sum the squares from 0 through 99 with an explicit loop."""
+    17         1          1.1      1.1      0.9      total = 0
+    18       101         57.9      0.6     45.0      for i in range(100):
+    19       100         68.4      0.7     53.2          total += i ** 2
+    20         1          1.2      1.2      0.9      return total
+
+Total time: 5.39279 s
+File: C:\2-uni\10-FallE4\EECE 435L\Lab9_FatimaBazzoun\Lab9_FatimaBazzoun\code\before\profiler.py
+Function: memory_intensive_function at line 23
+
+Line #      Hits         Time  Per Hit   % Time  Line Contents
+==============================================================
+    23                                           def memory_intensive_function():
+    24                                               """Run the handout's ten-million-iteration workload.
+    25                                           
+    26                                               Despite its name, this accumulates one integer rather than storing a list.
+    27                                               """
+    28         1          1.0      1.0      0.0      total = 0
+    29  10000001    2365681.5      0.2     43.9      for i in range(10000000):
+    30  10000000    3027109.3      0.3     56.1          total += i ** 2
+    31         1          2.1      2.1      0.0      return total
+

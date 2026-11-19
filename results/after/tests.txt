@@ -1,0 +1,17 @@
+> python -u -m unittest discover -v
+test_memory_intensive_function (test_profiler.TestProfiler.test_memory_intensive_function) ... 
+memory_intensive_function: 0.746097 seconds; result=333333283333335000000
+RSS before: 26.008 MiB; after: 26.016 MiB; delta: +0.008 MiB
+RSS is observed, not required to increase after the function returns.
+ok
+test_optimized_fast_function (test_profiler.TestProfiler.test_optimized_fast_function) ... 
+optimized_fast_function: 0.000014900 seconds; result=328350
+ok
+test_slow_function (test_profiler.TestProfiler.test_slow_function) ... 
+slow_function: 2.004012 seconds; result=333283335000
+ok
+
+----------------------------------------------------------------------
+Ran 3 tests in 2.772s
+
+OK

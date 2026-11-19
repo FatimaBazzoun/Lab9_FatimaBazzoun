@@ -1,0 +1,27 @@
+> python -u -m coverage run -m unittest discover -v
+test_fast_function (test_profiler.TestProfiler.test_fast_function) ... 
+fast_function: 0.000028400 seconds; result=328350
+ok
+test_memory_intensive_function (test_profiler.TestProfiler.test_memory_intensive_function) ... 
+memory_intensive_function: 2.214712 seconds; result=333333283333335000000
+RSS before: 32.621 MiB; after: 32.629 MiB; delta: +0.008 MiB
+RSS is observed, not required to increase after the function returns.
+ok
+test_slow_function (test_profiler.TestProfiler.test_slow_function) ... 
+slow_function: 2.007340 seconds; result=333283335000
+ok
+
+----------------------------------------------------------------------
+Ran 3 tests in 4.245s
+
+OK
+> python -u -m coverage report -m
+Name          Stmts   Miss  Cover   Missing
+-------------------------------------------
+profiler.py      23      4    83%   35-37, 41
+-------------------------------------------
+TOTAL            23      4    83%
+> python -u -m coverage html -d "C:\2-uni\10-FallE4\EECE 435L\Lab9_FatimaBazzoun\Lab9_FatimaBazzoun\results\before\htmlcov"
+Wrote HTML report to C:\2-uni\10-FallE4\EECE 435L\Lab9_FatimaBazzoun\Lab9_FatimaBazzoun\results\before\htmlcov\index.html
+> python -u -m coverage json -o "C:\2-uni\10-FallE4\EECE 435L\Lab9_FatimaBazzoun\Lab9_FatimaBazzoun\results\before\coverage.json"
+Wrote JSON report to C:\2-uni\10-FallE4\EECE 435L\Lab9_FatimaBazzoun\Lab9_FatimaBazzoun\results\before\coverage.json

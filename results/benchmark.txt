@@ -1,0 +1,11 @@
+Project: lab9_Fatima_Bazzoun
+Folder: C:\2-uni\10-FallE4\EECE 435L\Lab9_FatimaBazzoun\Lab9_FatimaBazzoun
+Fast-function benchmark (no cProfile, line_profiler, memory_profiler, or coverage)
+Python: 3.12.1; run (UTC): 2026-11-19T22:27:14.095189+00:00
+Both functions return: 328350
+7 alternating-order rounds; 50,000 calls per function per round.
+Before median: 5.377 microseconds/call
+After median:  6.643 microseconds/call
+Runtime reduction: -23.55% (negative means slower)
+This change affects only the 100-iteration fast function.
+The 2-second sleep and 10,000,000-iteration loop are unchanged.
